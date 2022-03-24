@@ -87,7 +87,7 @@ function App() {
     }
 
     CheckVictory(0);
-  }, [Poles]);
+  }, [Poles, StartPoleID]);
 
   return (
     <div className="Index">
@@ -107,13 +107,7 @@ function App() {
                             <Draggable key={item.id} draggableId={item.id} index={index}>
                               {(provided, snapshot) => {
                                 return (
-                                  <div className={(item.id == 0) ? "draggable zero" : (item.id == 1) ? "draggable one" : "draggable two"} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}
-                                    style={{
-                                      ...provided.draggableProps.style,
-                                      opacity: snapshot.isDragging
-                                        ? "0.5" : "1",
-                                    }}
-                                  >
+                                  <div className={(item.id === '0') ? "draggable zero" : (item.id === '1') ? "draggable one" : "draggable two"} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} style={{ ...provided.draggableProps.style, opacity: snapshot.isDragging ? "0.5" : "1" }}>
                                     {item.content}
                                   </div>
                                 );
@@ -121,8 +115,7 @@ function App() {
                             </Draggable>
                           );
                         })}
-                        {provided.placeholder}
-                        <p className="pole_base_color"/>
+                        <p className="pole_base_color" />
                       </div>
                     );
                   }}

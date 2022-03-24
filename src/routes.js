@@ -1,13 +1,5 @@
-import React, { useState, Component } from 'react';
-
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useParams,
-  Redirect,
-  useLocation,
-} from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import IndexPage from './pages/index/index.js';
 
