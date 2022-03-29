@@ -1,2 +1,2 @@
-# HanoiTower
-Simples jogo Torre de Hanói em drag and drop com ReactJS.
+## Tower of Hanoi Game
+Use **npm install** to install dependencies and **npm start** to start.
